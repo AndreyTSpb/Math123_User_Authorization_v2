@@ -46,11 +46,14 @@ function wp_math123_ua_v2_start($atts){
     /**
      * Если передан флаг меню = 1 то откроем меню
      */
-    if(isset($atts['menu']) AND $atts['menu'] == 1){
+    if(isset($atts['menu']) AND $atts['menu'] == 2){
         $view_menu = true;
     }else{
         $view_menu = false;
     }
+    add_action('wp_footer', 'wp_math123_ua_v2_css');
+
+    add_action( 'wp_head', 'head_seo_meta_tags1212' );
     /**
      * Подключили скрипт для обработки
      */
@@ -64,6 +67,10 @@ function wp_math123_ua_v2_start($atts){
     //echo wp_math123_ua_v2_login_html($atts['url']);
 }
 
+
+function hook_css(){
+    echo get_template_directory_uri();
+}
 /**
  * Если пользователь не авторизован выводим кнопку для входа,
  * и скрытую модалку в которой форма авторизации
@@ -121,6 +128,13 @@ function wp_math123_ua_v2_login_html($url){
 /**
  * Подключение скриптов и стилей
  */
+function wp_math123_ua_v2_css(){
+    wp_register_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ));
+   // wp_enqueue_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ), array(), null );
+
+    wp_enqueue_style( 'math123_ua_v2_css');
+}
+
 function wp_math123_ua_v2_script(){
     global $wp_math123_ua_v2_array;
     $js_data['url']     = $wp_math123_ua_v2_array['url'];
@@ -129,10 +143,6 @@ function wp_math123_ua_v2_script(){
 
     //$js_data['id_user'] = 3990;
     //$js_data['session_id'] = 'NbMAo181__1649404943';
-
-    wp_register_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ));
-
-    wp_enqueue_style( 'math123_ua_v2_css');
 
     /**
      * регистрация скриптов
@@ -149,4 +159,20 @@ function wp_math123_ua_v2_script(){
      * Параматры для скрипта
      */
     wp_localize_script( 'math123_ua_v2_script', 'wpMath123UAObj', $js_data );
+}
+
+
+function head_seo_meta_tags1212(){
+    // description
+    echo '<meta name="description" content="В статье описывается как динамически подключить ..." />';
+
+    // keywords
+    echo '<meta name="keywords" content="Код, Теория WordPress, jQuery, Оптимизация" />';
+
+    // robots
+    echo '<meta name="robots" content="index,nofollow" />';
+
+    // для мобильников.
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+
 }
