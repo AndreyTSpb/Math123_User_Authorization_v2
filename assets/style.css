@@ -1,0 +1,25 @@
+/* Кнопка для вызова модалки авторизации */
+#btn-enter-user{
+    width: 200px;
+    height: 50px;
+}
+
+/* Модалка с авторизацией */
+#enter-user{
+    text-align: left;
+}
+
+#enter-user .text-left{
+    text-align: left;
+}
+
+#user-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+#user-menu .dropdown-menu li{
+    text-align: left;
+}
