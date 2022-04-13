@@ -40,20 +40,20 @@ $wp_math123_ua_v2_array = array();
 
 add_shortcode('math123-user-auth-v2','wp_math123_ua_v2_start');
 
+add_action('wp_enqueue_scripts', 'wp_math123_ua_v2_css');
+
 function wp_math123_ua_v2_start($atts){
     global $wp_math123_ua_v2_array;
     $wp_math123_ua_v2_array['url'] = $atts['url'];
     /**
      * Если передан флаг меню = 1 то откроем меню
      */
-    if(isset($atts['menu']) AND $atts['menu'] == 2){
+    if(isset($atts['menu']) AND $atts['menu'] == 1){
         $view_menu = true;
     }else{
         $view_menu = false;
     }
-    add_action('wp_footer', 'wp_math123_ua_v2_css');
 
-    add_action( 'wp_head', 'head_seo_meta_tags1212' );
     /**
      * Подключили скрипт для обработки
      */
@@ -68,9 +68,6 @@ function wp_math123_ua_v2_start($atts){
 }
 
 
-function hook_css(){
-    echo get_template_directory_uri();
-}
 /**
  * Если пользователь не авторизован выводим кнопку для входа,
  * и скрытую модалку в которой форма авторизации
@@ -88,15 +85,15 @@ function wp_math123_ua_no_v2_login_html($url){
  * То что указываем в шапке если залогинен на базовом сайте
  */
 function wp_math123_ua_v2_login_html($url){
-    $new_mess = '<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">'.
+    $new_mess = '<span class="alert-point">'.
                     '2'.
-                    '<span class="visually-hidden">непрочитанные сообщения</span>'.
+                    '<!--span class="visually-hidden">непрочитанные сообщения</span-->'.
                  '</span>';
-    $new_bill = '<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">'.
+    $new_bill = '<span class="alert-point">'.
                     '1'.
-                    '<span class="visually-hidden">непрочитанные сообщения</span>'.
+                    '<!--span class="visually-hidden">непрочитанные сообщения</span-->'.
                 '</span>';
-    $menu_item = array(
+    $menu_item_uuu = array(
         array(
             'id'   => 'progress_header_menu',
             'link' => $url.'/mydostigenija',
@@ -119,7 +116,7 @@ function wp_math123_ua_v2_login_html($url){
         )
     );
     ob_start();
-    include WPM123UAV2_PLUGIN_DIR."/include/templates/user_menu.php";
+    include WPM123UAV2_PLUGIN_DIR."/include/templates/menu_elementor.php";
     $html = ob_get_contents();
     ob_end_clean();
     return $html;
@@ -130,7 +127,6 @@ function wp_math123_ua_v2_login_html($url){
  */
 function wp_math123_ua_v2_css(){
     wp_register_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ));
-   // wp_enqueue_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ), array(), null );
 
     wp_enqueue_style( 'math123_ua_v2_css');
 }

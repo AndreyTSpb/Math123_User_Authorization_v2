@@ -14,7 +14,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <?php foreach ($menu_item as $item):?>
+                <?php foreach ($menu_item_ as $item):?>
                 <li class="nav-item">
                     <a id="<?=$item['id'];?>" class="nav-link" aria-current="page" href="<?=$item['link']?>"><?=$item['name']?></a>
                 </li>
@@ -34,7 +34,7 @@
                     </li>
                 </ul>
 
-            </form>
+            </div>
         </div>
     </div>
 </nav>
