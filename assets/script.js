@@ -172,5 +172,17 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         });
 
+        /**
+         * Открытие пунктов меню
+         */
+        document.addEventListener("DOMContentLoaded", function () {
+            /*1) авешиваем слушателя на меню с инентификатором user-menu*/
+            /*1.1) Скрываем все открытые меню*/
+            /*2) Отслеживаем нажатие на верхнее меню*/
+            /*3) если у верхнего меню есть под меню открываем его*/
+            /*3.1) скрываем все другие меню */
+            let menu_items = document.querySelectorAll('.menu-item')
+        });
+
     });
 });
