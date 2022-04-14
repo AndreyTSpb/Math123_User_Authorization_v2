@@ -36,7 +36,7 @@
             <div class="modal-footer premium-modal-box-modal-footer">
                 <button form="form-register" type="submit" class="elementor-button elementor-size-xs">
                     <span class="elementor-align-icon-left elementor-button-icon">
-									<i aria-hidden="true" class="fas fa-sign-in-alt"></i>
+									<i aria-hidden="true" class="fas fa-sign-in-alt"></i>&shy;
                     </span>
                     <span class="elementor-button-text">Войти</span>
                 </button>

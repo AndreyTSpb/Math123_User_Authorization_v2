@@ -149,8 +149,43 @@
     display: block;
     text-align: center;
 }
-#user-menu .menu-item-fio{
-
+#user-menu .elementor-nav-menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
 }
 
+/* Прижимаем ФИО к правому краю */
+#user-menu .elementor-nav-menu .menu-item-fio{
+    order: 999;
+    margin-left: auto;
+}
+/* Стилизация выпадающего меню  */
+#user-menu .elementor-nav-menu ul {
+    display: none;
+}
+#user-menu .elementor-nav-menu ul.active {
+    display: block;
+}
+/* Открывается суб-мену*/
+#user-menu .menu-item-has-children a:hover ~ .sub-menu{ /* При наведении на ссылку в раппере, откроется контент */
+    display: block;
+}
+#user-menu .menu-item-has-children .sub-menu{
+    width: 100%;
+}
+#user-menu .menu-item-has-children .sub-menu a{
+    line-height: 20px;
+    font-size: 20px;
+    color: var( --e-global-color-accent );
+}
+#user-menu .menu-item-has-children .sub-menu:hover{
+    display: block;
+}
+@media screen {
 
+}

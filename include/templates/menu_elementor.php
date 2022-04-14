@@ -15,11 +15,11 @@
         <?php endforeach;?>
         <li class="menu-item-fio menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4173">
             <a href="#" class="elementor-item has-submenu" id="sm-16498522835521367-1" aria-haspopup="true" aria-controls="sm-16498522835521367-2" aria-expanded="false">
-                <i aria-hidden="true" class="fas fa-user"></i> <span id="user_name_header_menu">Пупкин Васько !</span><span class="sub-arrow"><i class="fas fa-caret-down"></i></span>
+                <i aria-hidden="true" class="fas fa-user"></i> <span id="user_name_header_menu">&shy;Пупкин Васько !</span><span class="sub-arrow"><i class="fas fa-caret-down"></i></span>
             </a>
             <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-16498522835521367-2" role="group" aria-hidden="true" aria-labelledby="sm-16498522835521367-1" aria-expanded="false">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4437"><a href="<?=$url?>/lk" class="elementor-sub-item">мои данные</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4431"><a href="<?=$url;?>/logoff" class="elementor-sub-item">Выход</a>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4437"><a href="<?=$url?>/lk" class="elementor-sub-item"><i aria-hidden="true" class="fas fa-user-edit"></i>&shy; мои данные</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4431"><a href="<?=$url;?>/logoff" class="elementor-sub-item"><i aria-hidden="true" class="fas fa-sign-out-alt"></i>&shy; Выход</a>
                 </li>
             </ul>
         </li>

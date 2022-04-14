@@ -126,7 +126,7 @@ function wp_math123_ua_v2_login_html($url){
  * Подключение скриптов и стилей
  */
 function wp_math123_ua_v2_css(){
-    wp_register_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ), array(), '9');
+    wp_register_style( 'math123_ua_v2_css', plugins_url( 'assets/style.css', __FILE__ ), array(), null);
 
     wp_enqueue_style( 'math123_ua_v2_css');
 }
