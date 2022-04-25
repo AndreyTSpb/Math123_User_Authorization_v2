@@ -85,38 +85,53 @@ function wp_math123_ua_no_v2_login_html($url){
  * То что указываем в шапке если залогинен на базовом сайте
  */
 function wp_math123_ua_v2_login_html($url){
-    $new_mess = '<span class="alert-point">'.
-                    '2'.
-                    '<!--span class="visually-hidden">непрочитанные сообщения</span-->'.
-                 '</span>';
-    $new_bill = '<span class="alert-point">'.
-                    '1'.
-                    '<!--span class="visually-hidden">непрочитанные сообщения</span-->'.
-                '</span>';
     $menu_item_uuu = array(
         array(
-            'id'   => 'progress_header_menu',
-            'link' => $url.'/mydostigenija',
-            'name' => 'мои достижения'
-        ),
-        array(
-            'id'   => 'homework_header_menu',
-            'link' => $url.'/myhomework',
-            'name' => 'мои задания'
+            'id'   => 'my_header_menu',
+            'link' => $url.'/lk',
+            'title' => 'Личный кабинет',
+            'icon' => '<i aria-hidden="true" class="fas fa-user"></i>',
+            'new'  => ''
         ),
         array(
             'id'   => 'message_header_menu',
             'link' => $url.'/messag',
-            'name' => 'мои сообщения'.$new_mess
+            'title' => 'Сообщения',
+            'icon' => '<i aria-hidden="true" class="fas fa-envelope"></i>',
+            'new'  => true
+        ),
+        array(
+            'id'   => 'progress_header_menu',
+            'link' => $url.'/mydostigenija',
+            'title' => 'Достижения',
+            'icon' => '<i aria-hidden="true" class="fas fa-medal"></i>',
+            'new'  => true
+        ),
+        array(
+            'id'   => 'homework_header_menu',
+            'link' => $url.'/myhomework',
+            'title' => 'Домашние задания',
+            'icon' => '<i aria-hidden="true" class="fas fa-lightbulb"></i>',
+            'new'  => ''
         ),
         array(
             'id'   => 'my_groups_header_menu',
             'link' => $url.'/mygroups',
-            'name' => 'мои группы/оплаты'.$new_bill
+            'title' => 'Группы и оплаты',
+            'icon' => '<i aria-hidden="true" class="fas fa-ruble-sign"></i>',
+            'new'  => ''
+        ),
+        array(
+            'id'   => 'sigout_header_menu',
+            'link' => $url.'/logoff',
+            'title' => 'Выход',
+            'icon' => '<i aria-hidden="true" class="fas fa-sign-out-alt"></i>',
+            'new'  => ''
         )
     );
     ob_start();
-    include WPM123UAV2_PLUGIN_DIR."/include/templates/menu_elementor.php";
+    //include WPM123UAV2_PLUGIN_DIR."/include/templates/menu_elementor.php";
+    include WPM123UAV2_PLUGIN_DIR."/include/templates/menu_artur.php";
     $html = ob_get_contents();
     ob_end_clean();
     return $html;
@@ -155,20 +170,4 @@ function wp_math123_ua_v2_script(){
      * Параматры для скрипта
      */
     wp_localize_script( 'math123_ua_v2_script', 'wpMath123UAObj', $js_data );
-}
-
-
-function head_seo_meta_tags1212(){
-    // description
-    echo '<meta name="description" content="В статье описывается как динамически подключить ..." />';
-
-    // keywords
-    echo '<meta name="keywords" content="Код, Теория WordPress, jQuery, Оптимизация" />';
-
-    // robots
-    echo '<meta name="robots" content="index,nofollow" />';
-
-    // для мобильников.
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-
 }

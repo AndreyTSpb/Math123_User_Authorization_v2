@@ -139,8 +139,8 @@
     position: absolute;
     top: 10%;
     right: 3%;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
     background-color: #C5299B;
     font-size: 13px;
@@ -186,6 +186,109 @@
 #user-menu .menu-item-has-children .sub-menu:hover{
     display: block;
 }
-@media screen {
 
+
+/*ARTUR*/
+#user-menu-artur{
+    position: relative;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 4px 0px -3px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+}
+#user-menu-artur .elementor-element-artur-icon{
+    width: auto;
+    align-self: center;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+#user-menu-artur .elementor-element-artur-icon > .elementor-widget-container{
+    margin: 0px 6px 0px 0px;
+
+}
+#user-menu-artur .elementor-element-artur-icon .elementor-icon-wrapper{
+    text-align: center;
+}
+
+#user-menu-artur .elementor-element-artur-icon .elementor-icon {
+    background-color: #ffffff;
+    color: #5a0046;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 0.5em;
+    fill: #fff;
+    /*#FCE300*/
+}
+#user-menu-artur .elementor-element-artur-icon .elementor-icon:hover{
+    background-color: #FCE300;
+}
+
+#user-menu-artur .alert-point{
+    position: absolute;
+    top: -5%;
+    right: 10%;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #C5299B;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    text-align: center;
+    animation: pulse 0.5s infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        width: 10px;
+        height: 10px;
+    }
+    50% {
+        width: 7px;
+        height: 7px;
+    }
+    100% {
+        width: 4px;
+        height: 4px;
+    }
+    50% {
+        width: 7px;
+        height: 7px;
+    }
+    0% {
+        width: 10px;
+        height: 10px;
+    }
+}
+@keyframes pulse {
+    0% {
+        width: 10px;
+        height: 10px;
+    }
+    50% {
+        width: 7px;
+        height: 7px;
+    }
+    100% {
+        width: 4px;
+        height: 4px;
+    }
+    50% {
+        width: 7px;
+        height: 7px;
+    }
+    0% {
+        width: 10px;
+        height: 10px;
+    }
 }
