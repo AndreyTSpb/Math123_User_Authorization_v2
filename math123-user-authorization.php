@@ -62,7 +62,7 @@ function wp_math123_ua_v2_start($atts){
     if((isset($_COOKIE['id_user']) AND !empty((int)$_COOKIE['id_user']) AND isset($_COOKIE['session_id']) AND !empty($_COOKIE['session_id'])) OR $view_menu){
         echo wp_math123_ua_v2_login_html($atts['url']);
     }else{
-        echo wp_math123_ua_no_v2_login_html($atts['url']);
+        echo wp_math123_ua_no_v2_login_html(trim($atts['url'],'/'));
     }
     //echo wp_math123_ua_v2_login_html($atts['url']);
 }
@@ -98,14 +98,14 @@ function wp_math123_ua_v2_login_html($url){
             'link' => $url.'/messag',
             'title' => 'Сообщения',
             'icon' => '<i aria-hidden="true" class="fas fa-envelope"></i>',
-            'new'  => true
+            'new'  => ''
         ),
         array(
             'id'   => 'progress_header_menu',
             'link' => $url.'/mydostigenija',
             'title' => 'Достижения',
             'icon' => '<i aria-hidden="true" class="fas fa-medal"></i>',
-            'new'  => true
+            'new'  => ''
         ),
         array(
             'id'   => 'homework_header_menu',

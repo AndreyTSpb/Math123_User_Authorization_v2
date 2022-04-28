@@ -20,7 +20,7 @@
                 <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body premium-modal-box-modal-body">
-                <form id="form-register" class="elementor-form" action="<?=$url?>login">
+                <form id="form-register" class="elementor-form" action="<?=$url?>/login">
                     <div class="elementor-form-fields-wrapper elementor-labels-above">
                         <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 text-left">
                             <label for="phoneUser" class="elementor-field-label">Телефон</label>
