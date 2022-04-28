@@ -60,7 +60,7 @@ function wp_math123_ua_v2_start($atts){
     add_action('wp_footer', 'wp_math123_ua_v2_script');
 
     if((isset($_COOKIE['id_user']) AND !empty((int)$_COOKIE['id_user']) AND isset($_COOKIE['session_id']) AND !empty($_COOKIE['session_id'])) OR $view_menu){
-        echo wp_math123_ua_v2_login_html($atts['url']);
+        echo wp_math123_ua_v2_login_html(trim($atts['url'],'/'));
     }else{
         echo wp_math123_ua_no_v2_login_html(trim($atts['url'],'/'));
     }

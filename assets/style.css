@@ -292,3 +292,18 @@
         height: 10px;
     }
 }
+
+.btn-artur{
+    border-radius: 18px 18px 18px 18px;
+    padding: 8px 24px 8px 24px;
+    background-color: #fce300;
+    color: #c5299b !important;
+    fill: #c5299b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.btn-artur:hover{
+    background-color: #ffffff;
+}
