@@ -294,6 +294,9 @@
 }
 
 .btn-artur{
+    display: block;
+    margin-left: auto;
+    width: 195px;
     border-radius: 18px 18px 18px 18px;
     padding: 8px 24px 8px 24px;
     background-color: #fce300;
@@ -302,6 +305,7 @@
     font-family: "Roboto";
     font-size: 18px;
     font-weight: bold;
+    line-height: 1;
 
 }
 .btn-artur:hover{
